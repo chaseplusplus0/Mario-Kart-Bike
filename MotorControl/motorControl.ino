@@ -16,7 +16,7 @@ void setup() {
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
+  // Old code to read in voltage and current from motor control board
   /*val = analogRead(A0); //Read pin A0 voltage (Use for voltage input)
   Serial.println(val); //Check serial monitor for value and voltage
   Serial.print("Voltage: ");
@@ -28,13 +28,12 @@ void loop() {
   Serial.println(((float(val)*1.75)/1024));*/
 
   // All of these change if you change the frequency, which shouldn't help anything
-
-  //digitalWrite(6, HIGH);
   
  while(1){
-    if(Serial.available() > 0){
+    // This code is to read in serial from RPi, not used due to explanation in readme
+    /*if(Serial.available() > 0){
       String data = Serial.readStringUntil('\n');
-    }
+    }*/
     if(vibrationRead == 1){
       digitalWrite(6, HIGH); //VRMS = 1.5 V
       delay(10);
@@ -43,7 +42,6 @@ void loop() {
       delay(random(10000, 45000));
     }
    }
-  //}
   
   //analogWrite(3, 123); //VRMS = 2 V
 
