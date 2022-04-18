@@ -13,7 +13,7 @@ To install this program, just open the Arduino file in the IDE, connect the Ardu
 
 # Usage
 
-To use, just make sure it is flashed onto the Nano and that the pin connections are all done correctly. Then, make sure the KY-032 is facing the rotating object and that the LED brightness potentiometer is tuned to the right distance needed.
+To use, just make sure it is flashed onto the Nano and that the pin connections are all done correctly. Then, make sure the KY-032 is facing the rotating object and that the LED brightness potentiometer is tuned to the right distance needed. Also, make sure that the serial is writing only the RPM (don't print anything else and don't use println) and that it is writing at 9600 baud rate (if you change this make sure to change it in the RPi serial read as well). The serial connection can be done directly from the Nano to the RPi.
 
 PIN CONNECTIONS (NANO to KY-032):  
 5V to +  

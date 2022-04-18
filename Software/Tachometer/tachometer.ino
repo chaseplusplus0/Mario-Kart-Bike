@@ -1,9 +1,14 @@
+//Tachometer driver file
+//Don't change baud rate of serial or it will break!!
+//Delay for loop limit can be changed to speed up measurement timing
+
+int limit = 500;
 
 int delay1(){
   int i,j;
   unsigned int count=0;
-  for(i=0;i<500;i++){
-    for(j=0;j<500;j++){
+  for(i=0;i<limit;i++){
+    for(j=0;j<limit;j++){
       if(digitalRead(2) == LOW){
         count++;
         while(digitalRead(2) == LOW);
