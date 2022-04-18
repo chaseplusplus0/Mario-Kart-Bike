@@ -29,18 +29,18 @@ The most important outcomes of the final version of this project include the fun
 
 This was a 3 person capstone project at Tennessee Technological University that took place over the course of two semesters of class. Team members include Reed Hester, Leah Faulkner, and Chase Griffin. Reed Hester is an Electrical Engineer and a graduating senior, and he worked mostly on the physical frame, modelling, and resistive element of the design. Chase Griffin is a Computer Engineer and also a graduating senior, and he worked on developing the control systems, implementing the component and sensor systems on the bike, and writing the programs to both operate and control the components and communicate with the Nintendo Switch/MarioKart game. Leah Faulkner is also a Computer Engineer, and she worked on the MET health system equations, touchscreen GUI controls, and the board box fan/airflow improvement. The supervising faculty member on this project was Jesse Roberts, and he proposed the original idea for the project itself. There was no direct customer for this project, and the intended userbase was very broad.
 
-# Arduino Files
+# Repo Contents
+This repository contains various bits of code used in the Mario Kart Bike capstone project. There are two Arduino files, one python program, and one entire RPi OS containing a working version of the python program with all dependencies included.
+
+### Arduino Files
 
 There are two Arduino compatible programs created for the two Arduino Nanos utilized in this project. The tachometer program contains the code necessary to operate the IR object-detection unit and to calculate the RPM from said unit. The motor control program contains the code to run the relay-controlled motor resistance system.
 
-# Joycontrol Python Program
+### Joycontrol Python Program
 
 This program is what does the actual control translation from each of the control systems on the bike. It is based on the open-source "Joycontrol" github program which can be found [here](https://github.com/mart1nro/joycontrol).
 
 However, a specific branch was used for the applications of this project, which can be instead found [here](https://github.com/Poohl/joycontrol).
 
-# Raspberry Pi file
-
-# Repo Contents
-This repository contains various bits of code used in the Mario Kart Bike capstone project. There are two Arduino files, one python program, and one entire RPi OS containing a working version of the python program with all dependencies included.
+### Raspberry Pi file
 
