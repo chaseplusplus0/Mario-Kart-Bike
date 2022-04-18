@@ -3,7 +3,7 @@ RPM calculation is performed and the RPM value is sent over the serial data line
 
 This program was designed for the Arduino Nano and the KY-032 IR obstacle avoidance sensor.
 
-To use, just make sure it is flashed onto the Nano and that the pin connections are all done correctly.
+To use, just make sure it is flashed onto the Nano and that the pin connections are all done correctly. Then, make sure the KY-032 is facing the rotating object and that the LED brightness potentiometer is tuned to the right distance needed.
 
 PIN CONNECTIONS:
 NANO          KY-032
