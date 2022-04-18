@@ -20,14 +20,14 @@ The health system functions according to an MET equation that takes in the user'
 
 # Salient Outcomes
 
-The most important outcomes of the final version of this project include the functional control scheme, the basic resistance system, and the
+The most important outcomes of the final version of this project include the functional control scheme, the basic resistance system, and the basic health system. These systems represent the core intentions of the project itself.
 
 # Video Demonstration and Photo Documentation
 
 
 # About us
 
-This was a 3 person capstone project that took place over the course of two semesters of class. Team members include Reed Hester, Leah Faulkner, and Chase Griffin. Reed Hester is an Electrical Engineer and a graduating senior, and he worked mostly on the physical frame, modelling, and resistive element of the design. Chase Griffin is a Computer Engineer and also a graduating senior, and he worked on developing the control systems, implementing the component and sensor systems on the bike, and writing the programs to operate and control both the components and communicate with the Nintendo Switch/MarioKart game. Leah Faulkner is also a Computer Engineer, and she worked on the MET health system equations, touchscreen GUI controls, and the board box fan/airflow improvement. The supervising faculty member on this project was Jesse Roberts, and he proposed the original idea for the project itself. There was no direct customer for this project, and the intended userbase was very broad.
+This was a 3 person capstone project at Tennessee Technological University that took place over the course of two semesters of class. Team members include Reed Hester, Leah Faulkner, and Chase Griffin. Reed Hester is an Electrical Engineer and a graduating senior, and he worked mostly on the physical frame, modelling, and resistive element of the design. Chase Griffin is a Computer Engineer and also a graduating senior, and he worked on developing the control systems, implementing the component and sensor systems on the bike, and writing the programs to both operate and control the components and communicate with the Nintendo Switch/MarioKart game. Leah Faulkner is also a Computer Engineer, and she worked on the MET health system equations, touchscreen GUI controls, and the board box fan/airflow improvement. The supervising faculty member on this project was Jesse Roberts, and he proposed the original idea for the project itself. There was no direct customer for this project, and the intended userbase was very broad.
 
 # Arduino Files
 
