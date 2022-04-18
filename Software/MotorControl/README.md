@@ -14,7 +14,7 @@ To install this program, just open the Arduino file in the IDE, connect the Ardu
 
 To use, make sure the program is flashed onto the Nano and that the pin connections are all done correctly. Next, make sure the relay is connected to the two motor leads such that closing it creates a short between the leads. Changing the delay between digitalwrite's can change the amount of time the leads are shorted form, however the time is currently at its minimum in the program. If using the serial line, make sure the Nano is only reading serial data, and use the read input as the condition for vibration data.
 
-PIN CONNECTIONS (NANO to RELAY)
-5V to +
-GND to -
-PIN D6 to IN
+PIN CONNECTIONS (NANO to RELAY)  
+5V to +  
+GND to -  
+PIN D6 to IN  
