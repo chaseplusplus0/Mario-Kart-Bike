@@ -15,9 +15,9 @@ To install this program, just open the Arduino file in the IDE, connect the Ardu
 
 To use, just make sure it is flashed onto the Nano and that the pin connections are all done correctly. Then, make sure the KY-032 is facing the rotating object and that the LED brightness potentiometer is tuned to the right distance needed.
 
-PIN CONNECTIONS:
-NANO          KY-032
-5V - - - - - - - +
-GND - - - - - -  -
-PIN 2 - - - - - OUT
+PIN CONNECTIONS:  
+NANO          KY-032  
+5V - - - - - - - +  
+GND - - - - - -  -  
+PIN 2 - - - - - OUT  
 OPEN            EN
