@@ -4,7 +4,7 @@ The motor resistance control program is incredibly simple. It has gone through m
 
 # Dependencies
 
-This program was designed for the Arduino Nano and a relay component. Without modifying pin connections, it will only work with these components. All functions present are found within the Arduino IDE.
+This program was designed for the Arduino Nano and a relay component. Without modifying pin connections, it will only work with these components. All functions present are found within the Arduino IDE. It is programmed in C++.
 
 # Installation
 

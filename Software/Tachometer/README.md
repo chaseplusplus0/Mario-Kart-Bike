@@ -5,7 +5,7 @@ RPM calculation is performed and the RPM value is sent over the serial data line
 
 # Dependencies
 
-This program was designed for the Arduino Nano and the KY-032 IR obstacle avoidance sensor. Without modifying pin choices and connections, it will only work with these components. All functions used are present within the Arduino IDE.
+This program was designed for the Arduino Nano and the KY-032 IR obstacle avoidance sensor. Without modifying pin choices and connections, it will only work with these components. All functions used are present within the Arduino IDE. It is programmed in C++.
 
 # Installation
 
