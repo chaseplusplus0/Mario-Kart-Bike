@@ -45,3 +45,7 @@ However, a specific branch was used for the applications of this project, which 
 ### Raspberry Pi file
 
 This is a flashed version of the RPi OS that the program was developed and tested on. It already contains all of the dependencies needed to run the program and operate the bike. It has only been tested on an RPi 3 Model B, so we cannot guarantee it's operation on other models.
+
+### Project Reports
+
+The reports from the project proposal and phase 1 and 2 of design are contained in this repo in pdf form to give
