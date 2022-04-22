@@ -36,16 +36,22 @@ This repository contains various bits of code used in the Mario Kart Bike capsto
 
 There are two Arduino compatible programs created for the two Arduino Nanos utilized in this project. The tachometer program contains the code necessary to operate the IR object-detection unit and to calculate the RPM from said unit. The motor control program contains the code to run the relay-controlled motor resistance system.
 
+### MET and GUI Program
+
+There is a python program that contains the code for the GUI that operates the health system and the menu navigation buttons.
+
 ### Joycontrol Python Program
 
 This program is what does the actual control translation from each of the control systems on the bike. It is based on the open-source "Joycontrol" github program which can be found [here](https://github.com/mart1nro/joycontrol).
 
 However, a specific branch was used for the applications of this project, which can be instead found [here](https://github.com/Poohl/joycontrol).
 
-### Raspberry Pi file
+### Raspberry Pi OS file
 
 This is a flashed version of the RPi OS that the program was developed and tested on. It already contains all of the dependencies needed to run the program and operate the bike. It has only been tested on an RPi 3 Model B, so we cannot guarantee it's operation on other models.
 
 ### Project Reports
 
-The reports from the project proposal and phase 1 and 2 of design are contained in this repo in pdf form to give
+The reports from the project proposal and phase 1 and 2 of design are contained in this repo in pdf form to give perspective on the entire design process from start to finish. They outline each step from conceptualization of the subsystems and initial specifications to the final version of each component and sensor being used in the build. It also contains the rationale behind each design choice, why some portions were removed from the scope, and why the bike exists in the state it does currently.
+
+
