@@ -54,4 +54,11 @@ This is a flashed version of the RPi OS that the program was developed and teste
 
 The reports from the project proposal and phase 1 and 2 of design are contained in this repo in pdf form to give perspective on the entire design process from start to finish. They outline each step from conceptualization of the subsystems and initial specifications to the final version of each component and sensor being used in the build. It also contains the rationale behind each design choice, why some portions were removed from the scope, and why the bike exists in the state it does currently.
 
+### Datasheet
+
+There is a datasheet containing the interface and control details of each subsystem and how they interact with each other. It can serve as a general outline for how to use the system itself. There is also experimental data for each system present as well.
+
+### Design Artifacts and BOM
+
+The 2D schematics and 3D models used in the development of this project are also included as well to give a perspective on what was involved in the design process. There is a bill of materials that also shows the cost of every relevant component and structure used.
 
