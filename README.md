@@ -24,10 +24,10 @@ The most important outcomes of the final version of this project include the fun
 
 # Video Demonstration and Photo Documentation
 
-<video width="320" height="240" autoplay muted>
-<source src="Project Documentation/Video/MarioKartDemo.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
+<div align="center">
+<a href="https://drive.google.com/file/d/1XO-LJ3wKvhisHmPTuDnR830Og8hAM-FM/view?usp=sharing">
+</a>
+</div>
 
 # About us
 
