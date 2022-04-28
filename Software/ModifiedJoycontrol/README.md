@@ -41,6 +41,9 @@ Libraries in code:
 
 	python3 -m pip install pyserial
 
+Libraries in code:
+
+	import serial
 
 
 
