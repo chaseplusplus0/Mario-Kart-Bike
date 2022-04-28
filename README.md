@@ -24,6 +24,18 @@ The most important outcomes of the final version of this project include the fun
 
 # Video Demonstration and Photo Documentation
 
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>HTML Video embed</title>
+   </head>
+   <body>
+      <p>Learn Eclipse</p>
+      <br />
+      <iframe width="560" height="315" src="https://drive.google.com/file/d/1XO-LJ3wKvhisHmPTuDnR830Og8hAM-FM/view?usp=sharing" frameborder="0" allowfullscreen></iframe>
+      </iframe>
+   </body>
+</html>
 
 # About us
 
