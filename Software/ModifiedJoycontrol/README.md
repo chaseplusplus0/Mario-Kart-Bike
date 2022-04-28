@@ -1,3 +1,58 @@
+# What does it do?
+
+This file contains the modified version of the "Joycontrol" program used in our project. It serves as the primary control signal compiler, translator, and transmitter between the external control systems and the console/game. It runs on the RPi and connects to the Nintendo Switch via bluetooth. It is meant to simulate the datastream from a standard pro controller such that the Switch recognizes it as one.
+
+# Dependencies
+
+There are several dependencies to get this program working properly. First of all, it is only configured to run on the RPi 3/3B+ and cannot be guaranteed to work on other RPi device (although it technically should). It is running on the Raspian (RPi OS : Rapsian GNU/Linux 11 (bullseye)) Operating System. It also requires python3 to run the program itself as that is the language used for almost all files.
+
+**Python** : [www.python.org/downloads](www.python.org/downloads)
+
+As far as the libraries used within the program, many of them are detailed in the original README contents below, but there are a few additional ones required for the modifications.
+
+If you don't already have pip:
+
+	sudo apt install python3-pip
+
+
+**GPIO Zero** : [Documentation](https://gpiozero.readthedocs.io/en/stable/index.html)
+
+In RPi terminal:
+	
+	sudo apt update
+	sudo apt install python3-gpiozero
+
+
+**ADS1015 ADC library** : [https://github.com/adafruit/Adafruit_Blinka](https://github.com/adafruit/Adafruit_Blinka)
+
+In RPi terminal:
+
+	sudo pip3 install Adafruit-Blinka
+
+Libraries in code:
+	
+	import board
+	import busio
+	import adafruit_ads1x15.ads1015 as ADS
+	from adafruit_ads1x15.analog_in import AnalogIn
+
+
+**Pyserial** :
+
+	python3 -m pip install pyserial
+
+
+
+
+
+
+# Installation
+
+# Usage
+
+# Original README Contents
+***
+
 # joycontrol
 
 Branch: master->amiibo_edits
