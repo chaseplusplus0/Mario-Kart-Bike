@@ -47,11 +47,7 @@ Libraries in code:
 
 
 
-
-
-# Installation
-
-# Usage
+INSTALLATION AND USAGE PARAMETERS DEFINED BELOW
 
 # Original README Contents
 ***
@@ -66,9 +62,11 @@ Tested on Raspberry 4B Raspbian, should work on 3B+ too and anything that can do
 
 ## Features
 Emulation of JOYCON_R, JOYCON_L and PRO_CONTROLLER. Able to send:
-- button commands
+- terminal button commands
 - stick state
-- nfc for amiibo read & owner registration
+- nfc for amiibo read & owner registration 
+- GPIO and serial compatibility
+- Touchscreen button integration
 
 ## Installation
 - Install dependencies  
