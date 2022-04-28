@@ -24,7 +24,7 @@ The most important outcomes of the final version of this project include the fun
 
 # Video Demonstration and Photo Documentation
 
-[![Watch the video](/ProjectDocumentation/Photos/boardbox-and-touchscreen.jpg "Video Demo")](https://drive.google.com/file/d/1XO-LJ3wKvhisHmPTuDnR830Og8hAM-FM/view?usp=sharing)
+[![Video](/Project\ Documentation/Photos/boardbox-and-touchscreen.jpg "Video Demo")](https://drive.google.com/file/d/1XO-LJ3wKvhisHmPTuDnR830Og8hAM-FM/view?usp=sharing)
 
 # About us
 
