@@ -1,5 +1,6 @@
 from tkinter import *
 import time
+from gpiozero import OutputDevice 
 
 root = Tk()
 #root.iconbitmap("c:/home/Desktop/GUI/icon.ico")
@@ -11,9 +12,18 @@ root.configure(bg = "#5d23c2")
 
 size = 15
 
+
+#Buttons GPIO for D-pad
+du_button = OutputDevice(27)
+dd_button = OutputDevice(22)
+dl_button = OutputDevice(5)
+dr_button = OutputDevice(6)
+a_button =  OutputDevice(13)
+b_button =  OutputDevice(19)
+
+#Frames 
 frame = Frame(root, bg = '#5d23c2')
 frame.grid(row = 1, column = 2)
-
 
 star = Frame(root, bg = '#5d23c2')
 star.grid(row = 0, column = 2)
@@ -32,6 +42,7 @@ frameStart.grid(row = 0, column = 1)
 
 #my_img.show()
 
+#Label
 starLabel = Label(star, text = "⭐", bg = '#5d23c2', fg = '#f7da00', font= ('Ariel', size+60))
 starLabel.grid()
 
@@ -59,6 +70,37 @@ root.geometry('860x480')
 #    global STOP
 #    if STOP is None:
 #        STOP = 0
+
+#Turn off pins
+def pinOff():
+    du_button.off()
+    dd_button.off() 
+    dl_button.off() 
+    dr_button.off()
+    a_button.off()
+    b_button.off()
+
+#Write to GPIO pin
+def writeToPin(pinNum):
+    if pinNum == 1:
+        du_button.on()
+        root.after(100, pinOff)
+    elif pinNum == 2:
+        dd_button.on()
+        root.after(100, pinOff)
+    elif pinNum == 3:
+        dl_button.on()
+        root.after(100, pinOff)
+    elif pinNum == 4:
+        dr_button.on()
+        root.after(100, pinOff)
+    elif pinNum == 5:
+        a_button.on()
+        root.after(100, pinOff)
+    elif pinNum == 6:
+        b_button.on()
+        root.after(100, pinOff)
+
 
 def clock():
     hour = time.strftime("%H")
@@ -89,12 +131,12 @@ def calcMET(startMET, stopMET, weight):
     
 def startTime():
 #myLabel_2.config(text="")
-	global start
-	hour = time.strftime("%H")
-	minute = time.strftime("%M")
-	second = time.strftime("%S")
-	start = time.time()
-	startTimeLabel.config(text= "Start time: " + hour + ":" + minute + ":" + second, bg = 'green', fg = 'white') 
+    global start
+    hour = time.strftime("%H")
+    minute = time.strftime("%M")
+    second = time.strftime("%S")
+    start = time.time()
+    startTimeLabel.config(text= "Start time: " + hour + ":" + minute + ":" + second, bg = 'green', fg = 'white') 
 #"Your mario workout session is running!"
 
 #def getAge():
@@ -103,26 +145,26 @@ def startTime():
 #myLabel_age.config(text= ageVar + " yrs")
 
 def delete():
-   e.delete(0, END)
+    e.delete(0, END)
 
 
 def getWeight():
-	global weightVar
-	weightVar = e.get()
-	e.delete(0, END)
-	myLabel_weight.config(text= "Weight: " + weightVar + " lbs")
+    global weightVar
+    weightVar = e.get()
+    e.delete(0, END)
+    myLabel_weight.config(text= "Weight: " + weightVar + " lbs")
 
 def stopTime():
 #myLabel.config(text="")
 #startVar = myLabel.get() doesn't work
 #newLabel = Label(root, text= startVar, fg = 'purple')
 #newLabel.grid()
-	global stop
-	hour = time.strftime("%H")
-	minute = time.strftime("%M")
-	second = time.strftime("%S")
-	stop = time.time()
-	myLabel_2.config(text= "Stop time: " + hour + ":" + minute + ":" + second, bg = '#d40813', fg = 'white', font= ('Ariel', size), padx = 60)
+    global stop
+    hour = time.strftime("%H")
+    minute = time.strftime("%M")
+    second = time.strftime("%S")
+    stop = time.time()
+    myLabel_2.config(text= "Stop time: " + hour + ":" + minute + ":" + second, bg = '#d40813', fg = 'white', font= ('Ariel', size), padx = 60)
 
 def click_num(number):
     #e.delete(0, END)
@@ -195,18 +237,20 @@ button_2.grid(row = 3, column = 1, sticky = 'nesw', padx = 1,pady = 1)
 button_3.grid(row = 3, column = 2, sticky = 'nesw', padx = 1,pady = 1)
 
 
-button_8 = Button(dpad, text = " ↑ ", bg = "#f7da00",fg = "white", command=lambda: click_num(8), font= ('Ariel', size+8))
-button_4 = Button(dpad, text = " ←", bg = "#f7da00",fg = "white", command=lambda: click_num(4), font= ('Ariel', size+8))
-button_6 = Button(dpad, text = "→ ", bg = "#f7da00",fg = "white", command=lambda: click_num(6), font= ('Ariel', size+8))
-button_2 = Button(dpad, text = " ↓ ", bg = "#f7da00",fg = "white", command=lambda: click_num(2), font= ('Ariel', size+8))
+#Buttons for D-pad
+button_8 = Button(dpad, text = " ↑ ", bg = "#f7da00",fg = "white", command=lambda: writeToPin(1), font= ('Ariel', size+8))
+button_4 = Button(dpad, text = " ←", bg = "#f7da00",fg = "white", command=lambda: writeToPin(3), font= ('Ariel', size+8))
+button_6 = Button(dpad, text = "→ ", bg = "#f7da00",fg = "white", command=lambda: writeToPin(4), font= ('Ariel', size+8))
+button_2 = Button(dpad, text = " ↓ ", bg = "#f7da00",fg = "white", command=lambda: writeToPin(2), font= ('Ariel', size+8))
 
 button_8.grid(row = 1, column = 1, sticky = 'nesw', padx = 10,pady = 5)
 button_6.grid(row = 2, column = 2, sticky = 'nesw', padx = 10,pady = 5)
 button_4.grid(row = 2, column = 0, sticky = 'nesw', padx = 10,pady = 5)
 button_2.grid(row = 3, column = 1, sticky = 'nesw', padx = 10,pady = 5)
 
-button_A = Button(AB_Button, text = " A ", bg = "#f7da00",fg = "white", command=lambda: click_num(6), font= ('Ariel', size+8))
-button_B = Button(AB_Button, text = " B ", bg = "#f7da00",fg = "white", command=lambda: click_num(2), font= ('Ariel', size+8))
+#Buttons A and B for menu select and back
+button_A = Button(AB_Button, text = " A ", bg = "#f7da00",fg = "white", command=lambda: writeToPin(5), font= ('Ariel', size+8))
+button_B = Button(AB_Button, text = " B ", bg = "#f7da00",fg = "white", command=lambda: writeToPin(6), font= ('Ariel', size+8))
 button_A.grid(row = 0, column = 1, sticky = 'nesw', padx = 10,pady = 5)
 button_B.grid(row = 1, column = 0, sticky = 'nesw', padx = 10,pady = 5)
 

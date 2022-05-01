@@ -33,7 +33,8 @@ Click the above picture to see the video demonstration of the project.
 This was a 3 person capstone project at Tennessee Technological University that took place over the course of two semesters of class. Team members include Reed Hester, Leah Faulkner, and Chase Griffin. Reed Hester is an Electrical Engineer and a graduating senior, and he worked mostly on the physical frame, modelling, and resistive element of the design. Chase Griffin is a Computer Engineer and also a graduating senior, and he worked on developing the control systems, implementing the component and sensor systems on the bike, and writing the programs to both operate and control the components and communicate with the Nintendo Switch/MarioKart game. Leah Faulkner is also a Computer Engineer, and she worked on the MET health system equations, touchscreen GUI controls, and the board box fan/airflow improvement. The supervising faculty member on this project was Jesse Roberts, and he proposed the original idea for the project itself. There was no direct customer for this project, and the intended userbase was very broad.
 
 # Repo Contents
-This repository contains various bits of code used in the Mario Kart Bike capstone project. There are two Arduino files, one python program, and one entire RPi OS containing a working version of the python program with all dependencies included.
+
+This repository contains various bits of code used in the Mario Kart Bike capstone project. There are two Arduino files, one python program for the GUI, and one larger python program that collects data from every external system and converts it to controller data.
 
 ### Arduino Files
 
@@ -60,4 +61,15 @@ There is a datasheet containing the interface and control details of each subsys
 ### Design Artifacts and BOM
 
 The 2D schematics and 3D models used in the development of this project are also included as well to give a perspective on what was involved in the design process. There is a bill of materials that also shows the cost of every relevant component and structure used.
+
+### Photos and Video
+
+There are some pictures of the bike and its various components as well as a video of the completed project in working form.
+
+
+# Final Notes
+
+If there are any questions regarding certain parts of the bike construction or code function, please feel free to reach out here on Github or email me (Chase) at: chgriffin13@gmail.com
+
+I'll do my best to help clarify!
 
