@@ -25,7 +25,12 @@ ads.gain = 2/3
 
 zl_button = Button(17,True,None,0.5)
 zr_button = Button(4,True,None,0.5)
-a_button = Button(5,True,None)
+up_button = Button(23)
+down_button = Button(24)
+left_button = Button(25)
+right_button = Button(8)
+a_button = Button(7)
+b_button = Button(12)
 
 ser = serial.Serial('/dev/ttyUSB0', 9600, timeout=0.01)
 ser.reset_input_buffer()
@@ -184,8 +189,8 @@ class ControllerCLI(CLI):
 
     async def run(self):
         initial = 0
-        zlFlag = 0;
-        zrFlag = 0;
+        zlFlag = 0
+        zrFlag = 0
         
         while True:
             if(initial < 1):
@@ -196,7 +201,7 @@ class ControllerCLI(CLI):
             if ser.in_waiting > 0:
                 line = ser.readline().decode('utf-8').rstrip()
                 if line == None:
-                    line = 0;
+                    line = 0
                 
             #print(line)
                 
@@ -226,6 +231,48 @@ class ControllerCLI(CLI):
                 zrFlag = 1
             else:
                 user_input = None
+            
+            if(user_input == None):
+                if(not down_button.is_pressed):
+                    user_input = 'down'
+            else:
+                if(not down_button.is_pressed):
+                    user_input = user_input + ' && down'
+                    
+            if(user_input == None):
+                if(not up_button.is_pressed):
+                    user_input = 'up'
+            else:
+                if(not up_button.is_pressed):
+                    user_input = user_input + ' && up'
+                    
+            if(user_input == None):
+                if(not left_button.is_pressed):
+                    user_input = 'left'
+            else:
+                if(not left_button.is_pressed):
+                    user_input = user_input + ' && left'
+                    
+            if(user_input == None):
+                if(not right_button.is_pressed):
+                    user_input = 'right'
+            else:
+                if(not right_button.is_pressed):
+                    user_input = user_input + ' && right'
+                    
+            if(user_input == None):
+                if(not a_button.is_pressed):
+                    user_input = 'a'
+            else:
+                if(not a_button.is_pressed):
+                    user_input = user_input + ' && a'
+                    
+            if(user_input == None):
+                if(not b_button.is_pressed):
+                    user_input = 'b'
+            else:
+                if(not b_button.is_pressed):
+                    user_input = user_input + ' && b'
                 
             
             mapval = int(chan.value / 6.75)
